@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo-er App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script defer src="main.js"></script></head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <section class="sidebar-section">
+      <div class="sidebar">
+        <div class="profile">
+          <span class="profile-img">B</span>
+          <p class="profile-name">Benedict</p>
+          <span class="material-symbols-outlined profile-more">arrow_drop_down</span>
+        </div>
+
+        <div class="sidebar-menu">
+          <div class="top-sidebar-menu">
+            <ul>
+              <li class="add-task">
+                <a href="#"><span class="material-symbols-outlined">add</span>Add Task</a>
+              </li>
+              <li><a href="#"><span class="material-symbols-outlined">inbox</span>Inbox</a></li>
+              <li><a href="#"><span class="material-symbols-outlined">today</span>Today</a></li>
+              <li><a href="#"><span class="material-symbols-outlined">calendar_month</span>Upcoming</a></li>
+              <li><a href="#"><span class="material-symbols-outlined">done_all</span>Completed</a></li>
+            </ul>
+          </div>
+
+          <div class="my-projects-menu">
+            <div class="my-projects-heading">
+              <p>My Projects</p>
+            </div>
+
+            <ul id="projects-list">
+              <!-- <li class="add-project">
+                <a href="#"><span class="material-symbols-outlined">add</span>Add Project</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="bottom-menu">
+          <a href="#"><span class="material-symbols-outlined">info</span>Help & Resources</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main content -->
+    <main class="content">
+      <h2 id="project-title">Getting Started</h2>
+      <div id="todos"></div>
+      <button id="add-todo"><span class="material-symbols-outlined">add</span> Add Todo</button>
+    </main>
+
+    <!-- Modals -->
+       <!-- Modal for Adding Todo -->
+      <div id="todo-modal" class="modal hidden">
+        <div class="modal-content">
+          <span id="close-modal" class="close">&times;</span>
+          <h3>Add New Todo</h3>
+          <form id="todo-form">
+            <label>Title:</label>
+            <input type="text" id="todo-title" required />
+
+            <label>Description:</label>
+            <textarea id="todo-desc"></textarea>
+
+            <label>Due Date:</label>
+            <input type="date" id="todo-due" required />
+
+            <label>Priority:</label>
+            <select id="todo-priority">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+
+            <button type="submit">Add Todo</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal for Adding Project -->
+      <div id="project-modal" class="modal hidden">
+        <div class="modal-content">
+          <span id="close-project-modal" class="close">&times;</span>
+          <h3>Add New Project</h3>
+          <form id="project-form">
+            <label>Project Name:</label>
+            <input type="text" id="project-name" required />
+
+            <button type="submit">Add Project</button>
+          </form>
+        </div>
+      </div>
+
+
+  </div>
+</body>
+</html>
