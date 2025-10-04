@@ -35,11 +35,18 @@
               <p>My Projects</p>
             </div>
 
-            <ul id="projects-list">
-              <!-- <li class="add-project">
-                <a href="#"><span class="material-symbols-outlined">add</span>Add Project</a>
-              </li> -->
+            <ul>
+              <li class="add-project">
+                <a href="">
+                  <span class="material-symbols-outlined">add</span>
+                  Add Project
+                </a>
+              </li>
             </ul>
+
+            <!-- Dynamic projects will be rendered here -->
+            <ul id="projects"></ul>
+
           </div>
         </div>
 
@@ -51,7 +58,10 @@
 
     <!-- Main content -->
     <main class="content">
-      <h2 id="project-title">Getting Started</h2>
+      <div class="nav">
+        <h2>Projects/</h2>
+        <h2 id="project-title">Getting Started</h2>
+      </div>
       <div id="todos"></div>
       <button id="add-todo"><span class="material-symbols-outlined">add</span> Add Todo</button>
     </main>
@@ -97,7 +107,6 @@
           </form>
         </div>
       </div>
-
 
   </div>
 </body>
